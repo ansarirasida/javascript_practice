@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/style.css" />
+	<link rel="stylesheet"  href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="regular slider">
+        <div><img src="images/banner1.png"></div>
+        <div><img src="images/banner1.png"></div>
+        <div><img src="images/banner1.png"></div>
+        <div><img src="images/banner1.png"></div>
+        <div><img src="images/banner1.png"></div>
+        <div><img src="images/banner1.png"></div>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	 <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+		  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+
+      $(".mobile-menu").click(function(){
+  			$(".navigation").toggleClass('active');
+	  });
+
+      $(".featureprod").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+        responsive: [
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 6
+		      }
+		    },
+		    {
+		      breakpoint: 1080,
+		      settings: {
+		        slidesToShow: 5
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 640,
+		      settings: {
+		        slidesToShow: 2
+		      }
+		    },
+		    {
+		      breakpoint: 240,
+		      settings: {
+		        slidesToShow: 2
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+
+      });
+      
+    });
+</script>
+</html>
+
